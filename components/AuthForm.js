@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, View, Image, TouchableOpacity, Alert} from "react-native";
 import Test2 from './Input';
+import authenticateUser from '../api/authentification';
 
 const Test1 = () => {
   return (
@@ -30,9 +31,13 @@ const Test1 = () => {
         <Text>Se connecter</Text>
         </TouchableOpacity>
     </View>
-
+    <TouchableOpacity onPress={() => Alert.alert("MDP Oublié")}>
       <Text style={{ fontSize: 15 }}>Mot de passe oublié ?</Text>
+      </TouchableOpacity>
+    
+      <TouchableOpacity onPress={() => Alert.alert("Inscription")}>
       <Text style={{ fontSize: 15 }}>S'inscrire</Text>
+      </TouchableOpacity>
     </View>
   );
 };
